@@ -1,0 +1,83 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Output of the go coverage tool
+*.cover
+
+# Temporary files created by the go tool, Godoc, etc.
+*.tmp
+*.temp
+
+# Build artifacts
+/build/
+/bin/
+/out/
+
+# Vendor directory (remove if you use Go modules)
+vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Go modules
+go.mod
+go.sum
+
+# IDE directories and files
+.idea/
+*.iml
+
+# Goland project-specific files
+.idea/
+*.idea/
+*.iml
+.idea/workspace.xml
+.idea/modules.xml
+.idea/.name
+.idea/vcs.xml
+.idea/*.iml
+.idea/libraries
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+
+# Cache directories
+/.cache/
+/tmp/
+/*.swp
+/*.swo
+.DS_Store
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Editors directories and files
+.vscode/
+*.code-workspace
+.history/
+*.code-workspace
+
+# Local configuration files
+.env
+.local.env
+*.local
+
+# Dependency directories (remove the comment if you use vendoring)
+/vendor/
+
+# Output of the go coverage tool, specifically the HTML format
+*.out.html

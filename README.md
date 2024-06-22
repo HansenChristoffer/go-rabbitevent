@@ -6,7 +6,7 @@ go-rabbitevent is a Go library designed to facilitate the creation of event disp
 
 - Simplified registration and management of event listeners.
 - Dynamic event dispatching based on message types.
-- Easy integration with RabbitMQ using the `github.com/streadway/amqp` library.
+- Easy integration with RabbitMQ using the `github.com/rabbitmq/amqp091-go` library.
 - Support for concurrent message handling.
 
 ## Installation
@@ -17,9 +17,9 @@ First, install the library using `go get`:
 go get github.com/hansenchristoffer/go-rabbitevent
 ```
 
-Make sure to also install the github.com/streadway/amqp dependency:
+Make sure to also install the github.com/rabbitmq/amqp091-go dependency:
 ```bash
-go get github.com/streadway/amqp
+go get github.com/rabbitmq/amqp091-go
 ```
 
 ## Usage
@@ -96,4 +96,5 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
- - streadway/amqp - AMQP library for Go.
+ - streadway/amqp - for the initial AMQP library for Go.
+ - rabbitmq/amqp091-go - for the continued AMQP library for Go.

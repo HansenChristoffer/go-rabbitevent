@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/hansenchristoffer/go-rabbitevent/event"
-	"github.com/streadway/amqp"
+	amqp "github.com/rabbitmq/amqp091-go"
 )
 
 // Consumer is responsible for managing the connection to the RabbitMQ server
@@ -80,11 +80,16 @@ func (c *Consumer) StartListening(queueName string, eventName string,
 		return fmt.Errorf("failed to register a consumer -> %v", err)
 	}
 
+	fe := make(chan bool)
+
 	go func() {
 		for d := range messages {
 			log.Printf("Received a message on %s[%s]: %s\n", eventName, queueName, d.Body)
 			dispatcher.DispatchEvent(queueName, d.Body, messageType)
 		}
 	}()
+
+	log.Printf(" Waiting for messages... Exit by pressing CTRL+C")
+	<-fe
 	return nil
 }
